@@ -8,7 +8,10 @@ module Storytime::PostExcerpt
 
     def populate_excerpt_from_content
       self.excerpt = (content || draft_content).slice(0..Storytime.post_excerpt_character_limit) if excerpt.blank?
-      self.excerpt = strip_tags(self.excerpt)
+
+      # htmlを保存できるよう修正
+      # self.excerpt = strip_tags(self.excerpt)
+      self.excerpt = self.excerpt
     end
   end
 end
