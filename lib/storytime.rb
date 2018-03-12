@@ -44,7 +44,7 @@ module Storytime
 
   # Character limit for Storytime::Post.excerpt
   mattr_accessor :post_excerpt_character_limit
-  @@post_excerpt_character_limit = 500
+  @@post_excerpt_character_limit = 2000
 
   # Hook for handling post content sanitization.
   # Accepts either a Lambda or Proc which can be used to
