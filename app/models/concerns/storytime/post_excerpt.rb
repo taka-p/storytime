@@ -2,7 +2,9 @@ module Storytime::PostExcerpt
   extend ActiveSupport::Concern
 
   included do
-    validates :excerpt, length: { in: 0..Storytime.post_excerpt_character_limit }
+    validates :excerpt
+    # 文字数制限を解除
+    # , length: { in: 0..Storytime.post_excerpt_character_limit }
 
     before_validation :populate_excerpt_from_content
 
