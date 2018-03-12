@@ -62,7 +62,9 @@ module Storytime
       attributes = Loofah::HTML5::WhiteList::ALLOWED_ATTRIBUTES
     end
 
-    attributes << "style"
+    # custom属性をマージ
+    add_custom_attr = %w[ style data-mdl-for ]
+    attributes = (attributes + add_custom_attr).uniq
 
     white_list_sanitizer.sanitize(draft_content, tags: tags, attributes: attributes)
   end
