@@ -63,8 +63,7 @@ module Storytime
     end
 
     # custom属性をマージ
-    add_custom_attr = %w[ style data-mdl-for ]
-    attributes = (attributes + add_custom_attr).uniq
+    attributes << 'style'
 
     white_list_sanitizer.sanitize(draft_content, tags: tags, attributes: attributes)
   end
