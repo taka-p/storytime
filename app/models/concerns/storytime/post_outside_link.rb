@@ -2,6 +2,6 @@ module Storytime::PostOutsideLink
   extend ActiveSupport::Concern
 
   included do
-    validates :outside_link, format: /\A#{URI::regexp(%w(http https))}\z/, allow_nil: true, allow_blank: true
+    validates :outside_link, allow_nil: true, allow_blank: true
   end
 end
