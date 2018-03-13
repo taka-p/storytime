@@ -67,6 +67,7 @@ module Storytime
       style
       data-lat
       data-lng
+      data-zoom
       data-center-lat
       data-center-lng
     ]
