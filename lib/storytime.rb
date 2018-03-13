@@ -63,7 +63,13 @@ module Storytime
     end
 
     # custom属性をマージ
-    attributes << 'style'
+    attributes += %w[
+      style
+      data-lat
+      data-lng
+      data-center-lat
+      data-center-lng
+    ]
 
     white_list_sanitizer.sanitize(draft_content, tags: tags, attributes: attributes)
   end
