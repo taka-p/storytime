@@ -2,7 +2,6 @@ module Storytime
   class BlogPost < Post
     include Storytime::PostComments
     include Storytime::PostExcerpt
-    include Storytime::PostOutsideLink
     include Storytime::PostFeaturedImages
     belongs_to :blog, class_name: "Storytime::Blog"
 
