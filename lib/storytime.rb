@@ -70,6 +70,7 @@ module Storytime
       data-zoom
       data-center-lat
       data-center-lng
+      data-content
     ]
 
     white_list_sanitizer.sanitize(draft_content, tags: tags, attributes: attributes)
