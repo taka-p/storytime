@@ -62,6 +62,11 @@ module Storytime
       attributes = Loofah::HTML5::WhiteList::ALLOWED_ATTRIBUTES
     end
 
+    # タグのマージ
+    tags += %w[
+      iframe
+    ]
+
     # custom属性をマージ
     attributes += %w[
       style
@@ -71,6 +76,7 @@ module Storytime
       data-center-lat
       data-center-lng
       data-content
+      allowfullscreen
     ]
 
     white_list_sanitizer.sanitize(draft_content, tags: tags, attributes: attributes)
